@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT World Education</title>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.0.0/mdb.min.css" rel="stylesheet" />
+    <link rel="icon" href="https://img.icons8.com/fluent/48/000000/globe-earth.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/CSS/home.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-1-strong">
+        <a href="index.html" class="navbar-brand m-2 ms-4 m-0 p-0">
+            <img src="https://img.icons8.com/fluent/32/000000/globe-earth.png" alt="Brand-Image">IT
+            World Education
+        </a>
+        <ul class="navbar-nav ms-auto me-3">
+            <li class="nav-item">
+                <a href="/home.html" class="nav-link active" aria-current="page">Overview</a>
+            </li>
+            <li class="nav-item">
+                <a href="/practice.html" class="nav-link">Practice</a>
+            </li>
+        </ul>
+        <button type="button" class="btn btn-danger btn-rounded btn-sm shadow-2-strong me-4" onclick="logout()">
+            <img src="https://img.icons8.com/material-rounded/17/000000/under-computer.png" alt=""
+                class="mb-1 d-inline me-1">
+            Logout
+        </button>
+    </nav>
+    <div id="main-body" class="container-fluid d-flex">
+        <div id="profile" class="gap-3">
+            <img src="" alt="profile pic"
+                class="img-thumbnail rounded-circle img-fluid mb-4" id="pic">
+            <div class="d-flex gap-3">
+                <h4>Name: </h4>
+                <h5 class="mt-1" id="name"></h5>
+            </div>
+            <div class="d-flex gap-3">
+                <h4>Email: </h4>
+                <h5 class="mt-1" id="email"></h5>
+            </div>
+        </div>
+        <div id="center-line"></div>
+        <div id="score-set" class="d-flex">
+            <div id="progress-1">
+                <div class="circular">
+                    <div class="inner"></div>
+                    <div class="numb" id="numb1"></div>
+                    <div class="circle">
+                        <div class="bar left">
+                            <div class="progress" id="c-left"></div>
+                        </div>
+                        <div class="bar right">
+                            <div class="progress" id="c-right"></div>
+                        </div>
+                    </div>
+                </div>
+                <h4 class="mt-5 pt-4" id="c-txt">C Programming</h4>
+                <div class="scores">
+                    <h4>Score: </h4>
+                    <h5 class="ms-2 mt-1" id="c-score"></h5>
+                </div>
+            </div>
+            <div id="progress-2">
+                <div class="circular">
+                    <div class="inner"></div>
+                    <div class="numb" id="numb2"></div>
+                    <div class="circle">
+                        <div class="bar left">
+                            <div class="progress" id="ds-left"></div>
+                        </div>
+                        <div class="bar right">
+                            <div class="progress" id="ds-right"></div>
+                        </div>
+                    </div>
+                </div>
+                <h4 class="mt-5 pt-4" id="ds-txt">Data Structures</h4>
+                <div class="scores">
+                    <h4>Score: </h4>
+                    <h5 class="ms-2 mt-1" id="ds-score"></h5>
+                </div>
+            </div>
+            <div id="progress-3">
+                <div class="circular">
+                    <div class="inner"></div>
+                    <div class="numb" id="numb3"></div>
+                    <div class="circle">
+                        <div class="bar left">
+                            <div class="progress" id="j-left"></div>
+                        </div>
+                        <div class="bar right">
+                            <div class="progress" id="j-right"></div>
+                        </div>
+                    </div>
+                </div>
+                <h4 class="mt-5 pt-4" id="j-txt">Java</h4>
+                <div class="scores">
+                    <h4>Score: </h4>
+                    <h5 class="ms-2 mt-1" id="j-score"></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="/JS/home.js"></script>
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.0.0/mdb.min.js"></script>
+</body>
+
+</html>

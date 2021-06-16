@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT World Education</title>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.0.0/mdb.min.css" rel="stylesheet" />
+    <link rel="icon" href="https://img.icons8.com/fluent/48/000000/globe-earth.png" type="image/x-icon" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/vs2015.min.css">
+    <link href="//cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <link rel="stylesheet" href="/CSS/coding.css" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-1-strong">
+        <a href="index.html" class="navbar-brand m-2 ms-4 m-0 p-0">
+            <img src="https://img.icons8.com/fluent/32/000000/globe-earth.png" alt="Brand-Image">IT
+            World Education
+        </a>
+        <ul class="navbar-nav ms-auto me-3">
+            <li class="nav-item">
+                <a href="/home.html" class="nav-link">Overview</a>
+            </li>
+            <li class="nav-item">
+                <a href="/practice.html" class="nav-link active" aria-current="page">Practice</a>
+            </li>
+        </ul>
+        <button type="button" class="btn btn-danger btn-rounded btn-sm shadow-2-strong me-4" onclick="logout()">
+            <img src="https://img.icons8.com/material-rounded/17/000000/under-computer.png" alt=""
+                class="mb-1 d-inline me-1">
+            Logout
+        </button>
+    </nav>
+    <div id="main-body" class="container-fluid py-5">
+        <div id="header-text" class="py-5 pt-2">
+            <div class="row">
+                <h6 class="col text-start wfix pe-0 ps-5">Problem:</h6>
+                <h6 class="col text-start wfix">Hello World</h6>
+            </div>
+            <div class="row">
+                <h6 class="col text-start wfix pe-0 ps-5">Score:</h6>
+                <h6 class="col text-start wfix">5</h6>
+            </div>
+            <div class="row">
+                <h6 class="col text-start wfix pe-0 ps-5">Difficulty:</h6>
+                <h6 class="col text-start wfix">Easy</h6>
+            </div>
+        </div>
+        <p class="fw-bold px-4">Problem Statement :</p>
+        <div id="prob-desc" class="bg-light p-4 border border-black rounded mx-4">
+            <pre class="m-0" id="desc">Print "Hello World!" without quotes using print statement.
+Finish the given function print_hw.</pre>
+        </div>
+        <p class="fw-bold p-4 pb-0 mt-4">Code Block:</p>
+        <div id="editor" class="bg-light border border-black rounded m-4 fs-6">
+        </div>
+        <button type="button" class="btn btn-lg btn-success ms-4">Run Code</button>
+        <button type="button" class="btn btn-lg btn-success ms-4">Submit Code</button>
+        <div id="runouts" class="ms-4 bg-light mt-5 me-4 border border-primary rounded">
+            <div class="row">
+                <div class="col-3">
+                    <div class="nav flex-column nav-tabs text-center border-end border-primary border-2" id="test-cases" role="tablist" aria-orientation="vertical">
+                        <a href="#testcase1" class="nav-link active text-success rounded-top" data-mdb-toggle="tab" role="tab" aria-controls="testcase1" aria-selected="true">Test Case 1</a>
+                        <a href="#testcase2" class="nav-link text-success" data-mdb-toggle="tab" role="tab" aria-controls="testcase2" aria-selected="false">Test Case 2</a>
+                        <a href="#testcase3" class="nav-link text-danger rounded-bottom" data-mdb-toggle="tab" role="tab" aria-controls="testcase3" aria-selected="false">Test Case 3</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+    <script src="//cdn.quilljs.com/1.3.6/quill.min.js"></script>
+    <script type="text/javascript" src="/JS/coding.js"></script>
+    <script>
+        var quill = new Quill(document.getElementById('editor'), {
+            modules: {toolbar: false, syntax:true},
+            formats: ['code-block'],
+            theme: 'snow'
+        });
+        var code = `#include<stdio.h>
+int main()
+{
+    return 0;
+}`;
+            quill.setText(code);
+            quill.formatText(0, quill.getLength(),{'code-block':true});
+      </script>
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.0.0/mdb.min.js"></script>
+</body>
+</html>

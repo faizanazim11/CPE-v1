@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: lightgoldenrodyellow;
+}
+
+#profile {
+    padding: 0;
+    margin: 0;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 20vh;
+    width: fit-content;
+}
+
+#pic {
+    height: 250px;
+    width: 250px;
+}
+
+#center-line {
+    height: 350px;
+    width: 1px;
+    border: 1px solid #000000;
+    opacity: 0.5;
+    margin-top: 20vh;
+}
+
+/*Progress bar*/
+.circular {
+    height: 100px;
+    width: 100px;
+    position: relative;
+    transform: scale(2);
+    margin-top: 35vh;
+}
+
+.circular .inner {
+    position: absolute;
+    z-index: 6;
+    top: 50%;
+    left: 50%;
+    height: 80px;
+    width: 80px;
+    margin: -40px 0 0 -40px;
+    background: lightgoldenrodyellow;
+    border-radius: 100%;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.circular .numb {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    font-size: 18px;
+    font-weight: 500;
+    color: teal;
+}
+
+.circular .bar {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    clip: rect(0px, 100px, 100px, 50px);
+}
+
+.circle .bar .progress {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    clip: rect(0px, 50px, 100px, 0px);
+    background: teal;
+}
+
+.circle .left .progress {
+    z-index: 1;
+}
+
+.circle .right {
+    z-index: 3;
+    transform: rotate(180deg);
+}
+
+.circle .right .progress {
+    animation: right 4s linear both;
+    animation-delay: 4s;
+}
+/*Progress bar-end*/
+
+
+.scores {
+    display: flex;
+}
+
+#score-set {
+    gap: 7vw;
+    margin-left: 9vw;
+}
+
+#c-txt,
+#ds-txt {
+    position: relative;
+    left: -2.2vw;
+}
+
+#j-txt {
+    position: relative;
+    left: 2vw;
+}

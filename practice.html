@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT World Education</title>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.0.0/mdb.min.css" rel="stylesheet" />
+    <link rel="icon" href="https://img.icons8.com/fluent/48/000000/globe-earth.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/CSS/practice.css" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-1-strong">
+        <a href="index.html" class="navbar-brand m-2 ms-4 m-0 p-0">
+            <img src="https://img.icons8.com/fluent/32/000000/globe-earth.png" alt="Brand-Image">IT
+            World Education
+        </a>
+        <ul class="navbar-nav ms-auto me-3">
+            <li class="nav-item">
+                <a href="/home.html" class="nav-link">Overview</a>
+            </li>
+            <li class="nav-item">
+                <a href="/practice.html" class="nav-link active" aria-current="page">Practice</a>
+            </li>
+        </ul>
+        <button type="button" class="btn btn-danger btn-rounded btn-sm shadow-2-strong me-4" onclick="logout()">
+            <img src="https://img.icons8.com/material-rounded/17/000000/under-computer.png" alt=""
+                class="mb-1 d-inline me-1">
+            Logout
+        </button>
+    </nav>
+    <div id="main-body" class="container-fluid">
+        <div class="d-flex flex-column mb-5">
+            <h5 class="text-center py-5 ">Select Subject to see Problems for practice:</h5>
+            <div class="btn-group mb-5 align-self-center" id="buttons" role="group">
+                <button type="button" class="btn btn-primary" onclick="load_data('C', this)" id="c-btn">C Programming</button>
+                <button type="button" class="btn btn-primary" onclick="load_data('ds', this)" id="ds-btn">Data Structures</button>
+                <button type="button" class="btn btn-primary" onclick="load_data('j', this)" id="j-btn">Java</button>
+            </div>
+        </div>
+        <div id="tables" class="mb-5 pb-5">
+            
+        </div>
+    </div>
+    <script type="text/javascript" src="/JS/practice.js"></script>
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.0.0/mdb.min.js"></script>
+</body>
+</html>
